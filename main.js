@@ -1,3 +1,7 @@
+// GLOBAL SCOPE
+let userScore = 0; 
+let computerScore = 0;
+
 // LOGIC TO GET COMPUTER CHOICE
 function getComputerChoice(items) {
   // Generate a random index between 0 and the length of the items array
