@@ -9,21 +9,24 @@ function getComputerChoice(items) {
 
 const choiceList = ["rock", "paper", "scissors"];
 const computerChoice = getComputerChoice(choiceList);
-console.log("Computer's choice is" + " " + computerChoice);
+console.log("Computer's choice is " + computerChoice);
 
 // LOGIC TO GET USER CHOICE
 function getUserChoice() {
-  // Prompt the user to input their choice
-  const userInput = prompt("Welcome to Rock, Paper, Scissors. What's your choice?");
-  const userChoice = userInput("rock" OR, "paper" OR, "scissors");
-  
-  if (isString(userChoice)) {
-    console.log("Your choice is" + " " + userChoice);
-  } else {
-    console.log("Invalid input. Please make a choice")
-  } 
+  let userInput = prompt("Welcome to Rock, Paper, Scissors. What's your choice?");
 
-  return userChoice;
+  // Function to validate user input
+  function isValidChoice(choice) {
+    // Check if the input is one of the valid options
+    return choice === "rock" || choice === "paper" || choice === "scissors";
+  }
+
+  // Validate the user input
+  while (!isValidChoice(userInput)) {
+    userInput = prompt("Invalid choice. Please enter rock, paper, or scissors.");
+  }
+
+  console.log("Your choice is " + userInput);
+  return userInput;
 }
-
-getUserChoice()
+getUserChoice();
