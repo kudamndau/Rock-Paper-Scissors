@@ -22,7 +22,7 @@ This is a classic Rock-Paper-Scissors game implemented using JavaScript. It allo
 4. The game will announce the winner of each round.
 5. After all rounds are played, the game will declare the overall winner.
 
-**Further Enhancements (Optional):**
+**Further Enhancements:**
 
 * Implement a best-of-three or best-of-five format.
 * Create a basic user interface using HTML and JavaScript.
